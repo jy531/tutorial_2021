@@ -13,15 +13,15 @@
 > > inc/NumRec.h
 > > src/NUmRec.cpp
 > > opencv --version 3.4.1.1
-> Functions:
+> > >Functions:
 	NumRec::numShow();
 	NumRec::numRead();
 	NumRec::numGet();
 	search_red(Mat src, Mat& dst);
 	search_red3(Mat src, Mat& dst);
-> Interfaces:
+> > >Interfaces:
 	NumRec digit("name.jpg")
-> Depend Libraries:
+> > >Depend Libraries:
 	opencv string iostream vector
 > 编译
 $ mkdir build
@@ -30,12 +30,12 @@ $ cmake ..
 $ make
 
 > 测试
-# how to run:
+##### how to run:
 cd bin
 ./Digital_realize name1.jpg
 
-# the result if it is running well:
->>> 1234
+##### the result if it is running well:
+>> 1234
 
 * * *
 
