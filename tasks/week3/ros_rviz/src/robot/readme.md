@@ -28,3 +28,5 @@ $ roslaunch robot robot.launch
 ```shell2
 $ rviz
 ```
+在rviz中把frame设置为my_frame
+然后add by topic 中的visualization_marker话题下的Marker.即可看到模拟内容。
