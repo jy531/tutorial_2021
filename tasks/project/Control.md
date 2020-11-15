@@ -5,10 +5,11 @@
 
 ## 控制和模拟器方向
 
-> 文件运行方式：
+> 
+-文件运行方式：
       在matlab中打开simlink模型文件quadCore_cs.slc,其他为参数以及函数文件。进入slc文件后点击RUN运行，在simlink中会对四旋翼3D模拟；
-		** 请安装simlink中的simscape multybody 库 **
-> 测试接口
+		* 请安装simlink中的simscape multybody 库 *
+- 测试接口
       在simlink中打开模型文件quadCore_cs.slc，可以通过左下方status_time来设置模拟过程中飞机的目标点，以及气压/风力；
 
 ### 实现方案
