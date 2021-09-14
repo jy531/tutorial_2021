@@ -5,7 +5,7 @@
 1. 安装 Linux 操作系统。
     - 由于参加考核的同学水平参差不齐，我们建议不熟悉 Linux 系统的同学在虚拟机装系统，而不用双系统，避免损坏你的硬盘。如果对计算机体系和操作系统较熟悉，可以安装双系统。
     - 对于本次考核，建议安装 **Ubuntu 18.04** 版本操作系统。因为考核内容涉及到 ROS 的使用，ROS 对 Ubuntu 正式支持，兼容性强，因此推荐较新的 Ubuntu 发行版。
-1. 学习 Git，熟悉 GitHub 的使用：[使用 `git` 和 GitHub 完成考核任务](https://github.com/SYSU-AERO-SWIFT/tutorial_2019/wiki/%E4%BD%BF%E7%94%A8-git-%E5%92%8C-GitHub-%E5%AE%8C%E6%88%90%E8%80%83%E6%A0%B8%E4%BB%BB%E5%8A%A1)。
+1. 学习 Git，熟悉 GitHub 的使用：[使用 `git` 和 GitHub 完成考核任务](https://github.com/SYSU-AERO-SWIFT/tutorial_2021/wiki/%E4%BD%BF%E7%94%A8git%E5%92%8CGitHub%E5%AE%8C%E6%88%90%E8%80%83%E6%A0%B8%E4%BB%BB%E5%8A%A1)。
 1. 学习 `g++` 的使用。
 1. 学习使用 Vim 或 Emacs。Vim 是一款强大的文本编辑器，我们强烈建议你熟练地掌握 Vim（或 Emacs），这将有助于你提升编程的效率。
 
