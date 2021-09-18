@@ -1,34 +1,51 @@
-## 基础考核 - 第二周（10.4-10.11）
+## 基础考核 - 第三周（9.30-10.6）
 
-### 必学内容：
+**必学内容：**
 
-1. 入门 OpenCV。
-2. 使用 `makefile`。
-3. 掌握基本的 Markdown 语法。
+1. 熟悉 ROS 的基本操作，包括文件架构、通信机制 (`Publisher`, `Subscriber`, `Service`, `Client`, `msgs`)、包的创建、节点、服务器等。
+2. 熟练使用检索工具，善于查看官方文档获取资料。
+3. 熟练使用 `cmake`。
+4. 参考资料：[ROS官方文档](http://wiki.ros.org/cn)、[MOOC-ROS教程](https://www.icourse163.org/course/ISCAS-1002580008)、[bilibili 网课资源](https://www.bilibili.com/video/BV1zt411G7Vn?from=search&seid=4645403767351408067&spm_id_from=333.337.0.0)。
 
-### 选修内容：
+**选修内容：**
 
-1. 多旋翼无人机飞行操控。
-   队伍会提供 [DJI Flight Simulator](https://www.dji.com/cn/simulator) 飞行模拟器，如果你在学校有空余时间，可以来实验室的模拟器上练习。训练飞行器操控技巧的一个重要目的在于：避免损失贵重的无人机。无人机在调试或实际飞行时可能遇到意外情况或者失控，如果没有良好的飞行器操控技巧我们不会冒险让你使用无人机。
-2. 习惯阅读英文文档以及官方文档。
+1. 了解 ROS 常用的可视化调试工具，包括二维的 `rosplot`，三维的 `rviz` 等。
 
-### 本周任务：
+**本周任务：**
 
-1. 编写一个**多文件**的 C++ 程序，用 OpenCV 写一个能对含有四位数码管的图片进行图像处理和数字识别的程序。具体要求请阅读[详细说明](https://github.com/SYSU-AERO-SWIFT/tutorial_2020/blob/master/tasks/week2/digit_programme.md)。并阅读[团队代码规范](https://github.com/SYSU-AERO-SWIFT/tutorial_2019/wiki/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E8%A7%84%E8%8C%83)，按照相应规范编写该程序。我们会提供测试样本，请自行验证测试样本，将工程文件和识别结果截图一并上传作为评分标准。
-2. 为上述工程写一个 `makefile` 文件并编译运行通过。
-3. 使用 Markdown，按照团队代码规范写一份说明文档。
-4. 完成[程序设计能力练习](https://github.com/SYSU-AERO-SWIFT/tutorial_2020/blob/master/tasks/week2/programming_exercise.md)第二周题目最长公共后缀，使用 `g++` 编译。
-5. 完成 [Shell 练习题](https://github.com/SYSU-AERO-SWIFT/tutorial_2020/blob/master/tasks/week2/shell_exercise.md)。可参考[菜鸟教程](http://www.runoob.com/linux/linux-shell.html)或者 [Shell Scripting Tutorial](https://www.shellscript.sh/) 等，掌握基础命令即可。
+1. 编写一个 package，其中包含一个信息发布节点 `Publisher`，和一个信息订阅节点 `Subscriber`。信息发布节点产生随机数据并发布，要求使用自己创建的自定义消息类型，信息订阅节点订阅话题并将数据输出到终端。
+2. 编写 ROS launch 文件并用 `roslaunch` 启动节点。
+3. 编写 `Service` 和 `Client`，`Client` 产生一个 0 到 1 内的随机浮点数，然后发给 `Service`，`Service` 接受到请求后，判断随机数是否小于 0.5，若是则回应布尔值 1，否则回应 0。`Client` 接收到回应后，先输出产生的随机数，然后输出 `Yes` 或 `No` 到终端。
+4. 相应地编写一个动态参数服务器。
+5. 利用提供的小车模型和源码，模仿源码并在源码的基础上修改，试着实现小车的转弯、停止，并尝试使用 `Publisher` 来发布指令来控制小车的方向和速度。详细要求请见 [任务说明](https://github.com/SYSU-AERO-SWIFT/tutorial_2021/blob/main/tasks/week3/task3_description.md)
+6. 让小车走一个 S 形（注意，我们在小车的行走中将加上噪声，你可能需要使用到PID控制）
+7. 编写一个基于ROS的模拟器对任务七仿真，详细说明[在这里](https://github.com/SYSU-AERO-SWIFT/tutorial_2021/blob/main/tasks/week3/project_description.md)
+8. 提交时请使用 `.gitignore` 忽略追踪中间文件（`build/`、`devel/`等）。
 
-### 评分标准：
+**评分标准：**
 
-| 评分项               | 积分值                      |
-| ----------------    | -------------------------- |
-| 程序设计练习 | 10分 |
-| 使用cmake编译工程并运行通过     | 15分        |
-| 工程质量及完整性             | 10~20分       |
-| 图片处理出各自连贯的数字       | 30分        |
-| 定位四个数字，分割数字 （5~20组Samples）       | 5~20分        |
-| 级别一测试样本识别率 = 60% ~ 100%                 | 10~50分    |
-| 级别二测试样本识别率 = 50% ~ 95% （>=95%算满分）   | 5~50分     |
-| 级别三测试样本识别率 = 40% ~ 90% （>=90%算满分）   | 0~50分     |
+| 评分项                        | 分值 |
+| ----------------------------- | ---- |
+| 完成Publisher与Subscriber通信 | 10分 |
+| 在通信中使用自己的msgs        | 5分 |
+| 编写launch文件来启动节点      | 5分 |
+| 完成Service与Client通信       | 10分 |
+| 完成动态参数服务器            | 10分 |
+| 实现通过Publisher控制小车运动 | 15分 |
+| 使用多线程以20Hz的频率控制小车| 15分 |
+| 让小车走S形（1级噪声）         | 15分 |
+|模拟器|115分|
+
+**怎么运行所提供的小车程序？**
+
+```shell
+$ cd ros_project  # 请先确保工程在catkin workspace下
+$ catkin_make  
+$ source devel/setup.bash
+$ roslaunch launch/little_car.launch
+```
+
+**Tips:**
+
+1. 多看 ROS wiki 以及使用搜索引擎将有助于你解决大部分问题。
+2. 对于源码有疑问，可以在群里发问，我们会在合适的范围内给予解答。
