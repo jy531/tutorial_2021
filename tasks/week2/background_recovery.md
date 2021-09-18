@@ -45,13 +45,14 @@
 
    };
    ```
-1. 程序要求具有足够健壮，具有通用性，即程序代码中不能根据提供的示例视频的特点进行针对性的处理。如果让程序处理例子之外的其他视频，也应达到预期的效果，但这项要求不作为评分标准。
-7. <b><font size="5"><span style="color:Red;">注意：请不要使用 OpenCV 自带的 [`cv::BackgroundSubtractor`](https://docs.opencv.org/3.4/d7/df6/classcv_1_1BackgroundSubtractor.html) 类及其子类来完成任务！</span></b>例如不能套用 [`cv::BackgroundSubtractorMOG2`](https://docs.opencv.org/3.4/d7/d7b/classcv_1_1BackgroundSubtractorMOG2.html) 的[教程](https://docs.opencv.org/3.4/d1/dc5/tutorial_background_subtraction.html)中展示的这个类的用法。</font>
+7. 程序要求具有足够健壮，具有通用性，即程序代码中不能根据提供的示例视频的特点进行针对性的处理。如果让程序处理例子之外的其他视频，也应达到预期的效果，但这项要求不作为评分标准。
+8. <b><font size="5"><span style="color:Red;">注意：请不要使用 OpenCV 自带的 [`cv::BackgroundSubtractor`](https://docs.opencv.org/3.4/d7/df6/classcv_1_1BackgroundSubtractor.html) 类及其子类来完成任务！</span></b>例如不能套用 [`cv::BackgroundSubtractorMOG2`](https://docs.opencv.org/3.4/d7/d7b/classcv_1_1BackgroundSubtractorMOG2.html) 的[教程](https://docs.opencv.org/3.4/d1/dc5/tutorial_background_subtraction.html)中展示的这个类的用法。</font>
 
     本任务旨在让大家熟悉 OpenCV 基本类和函数的使用，若用 `BackgroundSubtractor` 类解决问题不能对提高同学们的编程能力起到作用。请自己开动脑筋使用基本库函数完成提取任务。
 
 
-1. 对程序运行时间没有要求，如果你的算法处理速度极快可以得到加分。
+9. 对程序运行时间没有要求，如果你的算法处理速度极快可以得到加分。
+10. 可以使用机器学习/深度学习方法，如果用到请附上数据集和训练代码。
 
 ### 输入与输出格式参考：
 
